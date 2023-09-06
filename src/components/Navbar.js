@@ -15,7 +15,7 @@ export default function Navbar(props) {
   // const [ids,setIds] = useState({});
   const getIds = async (movieName) => {
     let data = await fetch(
-      `https://movie-recom-api.herokuapp.com/getids/${movieName}`
+      `/getids/${movieName}`
     );
     let datajson = await data.json();
     // console.log(ids);

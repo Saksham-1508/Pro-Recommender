@@ -4,7 +4,7 @@ import MovieItems from "./MovieItems";
 export default function Recommendations() {
   const [movies, setMovies] = useState([]);
   const getRecommendations = async () => {
-    let data = await fetch("http://127.0.0.1:5000/similarity/tt1270797");
+    let data = await fetch("/similarity/tt1270797");
     let datajson = await data.json();
     let temp = [];
     for (let i = 0; i < datajson.length; i++) {
